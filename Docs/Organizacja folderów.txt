@@ -1,0 +1,41 @@
+###Standartowy plik .gitignore ####
+Temp
+Library
+Builds
+*.csproj
+*.unityproj
+*.sln
+*.userprefs
+
+sysinfo.txt
+
+**/output_log.txt
+################
+
+-----------
+
+###Minimalny uk³ad folderów na repozytorium#####
+Asset Sources - wszystkie Ÿród³a z których tworzone s¹ assety. Assety w stanie "surowym" oraz referencje "specjalistyczne" - dotycz¹cze poszczególnych assetów
+Docs - miejsce na dokumentacjê, referencje, specjalistyczne know how itp
+Docs\Referencje - referencje ogólne - dla wszystkich - do projektu
+Unity Project - folder zawieraj¹cy projekt uruchamiany w Unity
+Builds - folder zawieraj¹cy ka¿d¹ zbudowan¹ wersjê. Wczeœniej ten folder trzymaliœmy wewn¹trz Unity Project. Folder jest ignorowany przez repozytorium, aby nie zapychaæ go niepotrzebnie - wersje pogl¹dowe s¹ wrzucane na serwer poza systemem GIT. Zaleca siê porz¹dkowaæ buildy po dacie. Przyk³adowo buildy na platformy tzw. Standalone to ka¿dy build wrzucaæ w foldery nazwane np 2015.10.19_b1 (rok.miesi¹c.dzieñ.kolejny numer builda w danym dniu). Zaœ dla wersji androidowych sugeruje siê nazywanie .apk SNP_20151019001 (Skrótowa Nazwa Projektu, rok, miesi¹c, dzieñ, trzy cyfrowy numer builda).
+####################################
+
+-----------
+
+###Minimalny uk³ad folderów wewn¹trz projektu Unity##############
+(Scenes) - zawiera foldery ze scenami. W nawiasach, aby by³ na samej górze widoku projektu
+Art Assets - Wszystkie modele, tekstury, sprite-y, fonty, dŸwiêki i muzyka, które mog¹ byæ w projekcie wielokrotnie u¿ywane
+Editor - skrypty i elementy GUI edytora
+Prefabs - obiekty prefabrykowane (prefab) z³o¿one z assetów i skryptów wielokrotnego u¿ytku
+Custom Prefabs - zawsze zawiera podfoldery. W ka¿dym z podfolderów znajduje siê prefab (lub zestaw prefabów) oraz foldery z customowymy assetami, które nie powinny byæ nigdzie indziej wykorzystywane
+Scripts - ca³a baza kodowa napisana dla danego projektu. Wyj¹tek stanowi¹ skrypty napisane dla customowych prefabów.
+Standard Assets - assety dostarczane przez Unity, które zaleca siê importowaæ
+Third Party - zakupione paczki. Zazwyczaj maj¹ inne ni¿ stosowane przez nas nazewnictwo oraz sposób porz¹dkowania, dlatego by nie marnowaæ czasu pobie¿nie je porz¹dkujemy i wk³adamy do tego folderu.
+
+Foldery na materia³y testowe oznaczamy przedrostkiem "TEST " (wczeœniej stosowaliœmy przedrostek "DEBUG ").
+###############################################
+
+!!!UWAGA!!!
+Organizacja projektów jest obiektem ci¹g³ych udoskonaleñ i poprawek. Dlatego œci¹gaj¹c (zw³aszcza) starsze repozytorium nale¿y sprawdziæ jaka jest w nim organizacja folderów oraz przestrzegaæ ustalonego wówczas porz¹dku! 
